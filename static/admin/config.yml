@@ -10,12 +10,14 @@ collections:
       label: 'Pages'
       files:
           - file: 'src/pages/home/index.md'
-            name: 'homepage'
-            label: 'Homepage'
+            label: '🏠 Home'
+            name: 'home'
             fields:
-                - { label: 'Test', name: test, widget: 'string' }
+                - { label: 'Header', name: 'header', widget: 'string' }
+                - { label: 'Subheader', name: 'subheader', widget: 'string' }
+                - { label: 'Header Image', name: 'header_image', widget: 'image' }
           - file: 'src/pages/about/index.md'
-            label: 'About'
+            label: '👩 About'
             name: 'about'
             fields:
                 - {
