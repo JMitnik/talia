@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Header from '../components/Header';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,8 +11,11 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <Header>
+          <div>Test12312</div>
+        </Header>
         <section className="section">
-          <div className="container">
+          {/* <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
             </div>
@@ -39,7 +43,7 @@ export default class IndexPage extends React.Component {
                   </p>
                 </div>
               ))}
-          </div>
+          </div> */}
         </section>
       </Layout>
     )
