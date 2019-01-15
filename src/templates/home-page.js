@@ -7,7 +7,7 @@ import Content, { HTMLContent } from '../components/Content'
 const HomePage = ({ data }) => {
   return (
     <Layout>
-
+     
     </Layout>
   )
 }
@@ -17,7 +17,6 @@ HomePage.propTypes = {
 }
 
 export default HomePage;
-
 
 export const homePageQuery = graphql`
   query HomePage($id: String!) {

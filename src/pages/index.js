@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
+import Label from '../components/Label';
+import Section from '../components/Section';
 
 const IndexPage = ({ data }) => {
     const frontData = data.allMarkdownRemark.edges[0].node.frontmatter;
@@ -10,10 +12,14 @@ const IndexPage = ({ data }) => {
 
     return (
         <Layout>
-          <Header>
+          <Header backgroundImage={header_image}>
+            <Label>Hello</Label>
             <h1>{header}</h1>
             <h2>{subheader}</h2>
           </Header>
+          <Section>
+              <h3>Who am I?</h3>
+          </Section>
         </Layout>
     );
 };

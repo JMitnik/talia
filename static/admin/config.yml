@@ -13,6 +13,12 @@ collections:
             label: '🏠 Home'
             name: 'home'
             fields:
+                - {
+                      label: 'Template Key',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'home-page',
+                  }
                 - { label: 'Header', name: 'header', widget: 'string' }
                 - { label: 'Subheader', name: 'subheader', widget: 'string' }
                 - { label: 'Header Image', name: 'header_image', widget: 'image' }
@@ -195,3 +201,12 @@ collections:
                               },
                           ],
                   }
+    - name: "t_shirts"
+      label: "T-Shirts"
+      folder: 'src/creations/t_shirts'
+      create: true
+      fields: 
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Description", name: "description", widget: "markdown"}
+        - {label: "Image", name: "image", widget: "image"}
+
