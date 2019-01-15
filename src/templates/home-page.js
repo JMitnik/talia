@@ -42,11 +42,19 @@ HomePage.propTypes = {
 export default HomePage;
 
 export const homePageQuery = graphql`
-    query HomePage($id: String!) {
-        markdownRemark(id: { eq: $id }) {
-            html
-            frontmatter {
-                title
+    query HomePage {
+        allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+            filter: { frontmatter: { templateKey: { eq: "home-page" } } }
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                        header
+                        subheader
+                        header_image
+                    }
+                }
             }
         }
     }
