@@ -2,9 +2,9 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components";
-import Navbar from '../components/Navbar'
-import './all.sass'
+import Navbar from '../components/Navbar';
 import Theme from './styles/Theme';
+import GlobalStyles from './styles/GlobalStyles';
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -39,6 +39,7 @@ const TemplateWrapper = ({ children }) => (
         </Helmet>
         <ThemeProvider theme={Theme}>
           <div>
+            <GlobalStyles/>
             <Navbar />
             <div>{children}</div>
           </div>

@@ -1,7 +1,8 @@
 const Theme = {
-    'primaryColor': 'yellow',
-    'secondary-color': 'red',
-    'containerWidthLg': '1344px'
+    primaryColor: '#ddd',
+    secondaryColor: 'red',
+    containerWidthLg: '1344px',
+    gutter: '30px',
 };
 
 
