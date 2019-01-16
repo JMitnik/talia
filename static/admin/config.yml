@@ -7,7 +7,7 @@ public_folder: /img
 
 collections:
     - name: 'pages'
-      label: 'Pages'
+      label: '📃 Pages'
       files:
           - file: 'src/pages/home/index.md'
             label: '🏠 Home'
@@ -201,12 +201,12 @@ collections:
                               },
                           ],
                   }
-    - name: "t_shirts"
-      label: "T-Shirts"
-      folder: 'src/creations/t_shirts'
+    - name: "designs"
+      label: "️🎨 Designs"
+      folder: 'src/creations/designs'
       create: true
       fields: 
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Description", name: "description", widget: "markdown"}
         - {label: "Image", name: "image", widget: "image"}
-
+        - {label: "Design type", name: "design_type", widget: "select", options: ["Product", "Brand", "Etc"]}
