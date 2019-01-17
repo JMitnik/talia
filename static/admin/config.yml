@@ -29,10 +29,18 @@ collections:
                 - {
                       label: 'Portfolio items',
                       name: 'portfolio_items',
-                      widget: 'relation',
-                      collection: 'designs',
-                      valueField: 'title',
-                      searchFields: ['title'],
+                      widget: 'list',
+                      field:
+                          {
+                              label: 'Product Designs',
+                              name: 'product_designs',
+                              collection: 'designs',
+                              default: 'list',
+                              searchFields: ['title', 'description'],
+                              valueField: 'title',
+                              displayFields: ['title', 'description'],
+                              widget: 'relation'
+                          },
                   }
           - file: 'src/pages/about/index.md'
             label: '👩 About'

@@ -8,7 +8,8 @@ const HeaderStyle = styled.header`
     flex-wrap: wrap;
     width: 100%;
     min-height: 40vh;
-    background: ${props => props.background ? `url(${props.background})` :props.theme.defaultColor };
+    /* background: ${props => props.background ? `url(${props.background})` :props.theme.defaultColor }; */
+    background: ${props => props.theme.defaultColor };
     align-items: flex-end;
     padding-bottom: ${props => props.theme.gutter};
     font-family: ${props => props.theme.mainFont};
@@ -19,6 +20,10 @@ const HeaderStyle = styled.header`
 
     h2 {
         font-size: 1.7rem;
+    }
+
+    .text-playful {
+        font-family: ${props => props.theme.playFont};
     }
 `;
 

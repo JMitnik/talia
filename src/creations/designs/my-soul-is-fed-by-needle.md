@@ -10,4 +10,3 @@ description: >-
 image: /img/my-soul-is-fed-by-needle.jpg
 design_type: Product
 ---
-

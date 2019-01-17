@@ -8,13 +8,14 @@ import Section from '../components/styles/Section';
 import Portfolio from './Portfolio';
 
 const IndexPage = ({ data }) => {
-    const frontData = data.allMarkdownRemark.edges[0].node.frontmatter;
+    console.log(data);
+    const frontData = data.homepage.edges[0].node.frontmatter;
     const { header, subheader, header_image } = frontData;
 
     return (
         <Layout>
             <Header backgroundImage={header_image}>
-                <Label>Hello</Label>
+                <h4 class="text-playful">Hello</h4>
                 <h1>{header}</h1>
                 <h2>{subheader}</h2>
             </Header>
@@ -36,7 +37,7 @@ const IndexPage = ({ data }) => {
             </Section>
             <Section center>
                 <h4>Portfolio</h4>
-                <Portfolio/>
+                <Portfolio />
             </Section>
             <Section />
         </Layout>
@@ -45,7 +46,7 @@ const IndexPage = ({ data }) => {
 
 export const homepageQuery = graphql`
     query homepageQuery {
-        allMarkdownRemark(
+        homepage: allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
             filter: { frontmatter: { templateKey: { eq: "home-page" } } }
         ) {

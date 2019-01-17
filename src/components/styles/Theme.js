@@ -5,7 +5,8 @@ const Theme = {
     containerWidthLg: '1344px',
     textContainer: '900px',
     gutter: '30px',
-    mainFont: "'Quicksand', sans-serif"
+    mainFont: "'Quicksand', sans-serif",
+    playFont: '"Indie Flower", cursive'
 };
 
 export default Theme;
