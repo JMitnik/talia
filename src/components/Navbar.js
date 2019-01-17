@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logo.svg';
-import ContainerStyle from './styles/ContainerStyle';
+import Container from './styles/Container';
 import styled from 'styled-components';
 
 const Nav = styled.nav``;
@@ -36,7 +36,7 @@ const Navbar = class extends React.Component {
 
     render() {
         return (
-            <ContainerStyle as={Nav} role="navigation" aria-label="main-navigation">
+            <Container as={Nav} role="navigation" aria-label="main-navigation">
                 <div className="navbar-brand">
                     <Link to="/" className="navbar-item" title="Logo">
                         <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
@@ -64,7 +64,7 @@ const Navbar = class extends React.Component {
                         </Link>
                     </div>
                 </div>
-            </ContainerStyle>
+            </Container>
         );
     }
 };

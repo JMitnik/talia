@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import ContainerStyle from './styles/ContainerStyle';
+import Container from './styles/Container';
 
 
 const HeaderStyle = styled.header`
@@ -24,9 +24,9 @@ const HeaderStyle = styled.header`
 
 const Header = ({ backgroundImage, children }) => (
     <HeaderStyle background={backgroundImage}>
-        <ContainerStyle>
+        <Container>
             <div>{children}</div>
-        </ContainerStyle>
+        </Container>
     </HeaderStyle>
 );
 

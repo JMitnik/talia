@@ -21,7 +21,19 @@ collections:
                   }
                 - { label: 'Header', name: 'header', widget: 'string' }
                 - { label: 'Subheader', name: 'subheader', widget: 'string' }
-                - { label: 'Header Image', name: 'header_image', widget: 'image' }
+                - {
+                      label: 'Header Image',
+                      name: 'header_image',
+                      widget: 'image',
+                  }
+                - {
+                      label: 'Portfolio items',
+                      name: 'portfolio_items',
+                      widget: 'relation',
+                      collection: 'designs',
+                      valueField: 'title',
+                      searchFields: ['title'],
+                  }
           - file: 'src/pages/about/index.md'
             label: '👩 About'
             name: 'about'
@@ -201,12 +213,17 @@ collections:
                               },
                           ],
                   }
-    - name: "designs"
-      label: "️🎨 Designs"
+    - name: 'designs'
+      label: '️🎨 Designs'
       folder: 'src/creations/designs'
       create: true
-      fields: 
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Description", name: "description", widget: "markdown"}
-        - {label: "Image", name: "image", widget: "image"}
-        - {label: "Design type", name: "design_type", widget: "select", options: ["Product", "Brand", "Etc"]}
+      fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'markdown' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - {
+                label: 'Design type',
+                name: 'design_type',
+                widget: 'select',
+                options: ['Product', 'Brand', 'Etc'],
+            }
