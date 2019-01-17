@@ -9,5 +9,5 @@ description: >-
   A quilting grandma is a cool grandma!
 image: /img/cool-quilting-grandma.jpg
 design_type: Product
+templateKey: item-page
 ---
-

@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <Header backgroundImage={header_image}>
-                <h4 class="text-playful">Hello</h4>
+                <h4 class='text-playful'>Hello</h4>
                 <h1>{header}</h1>
                 <h2>{subheader}</h2>
             </Header>
@@ -44,10 +44,28 @@ const IndexPage = ({ data }) => {
     );
 };
 
+export const imageQuery = graphql`
+    fragment imageQuery on MarkdownRemarkConnection {
+        edges {
+            node {
+                frontmatter {
+                    image {
+                        publicURL
+                        childImageSharp {
+                            original {
+                                src
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`;
+
 export const homepageQuery = graphql`
     query homepageQuery {
         homepage: allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
             filter: { frontmatter: { templateKey: { eq: "home-page" } } }
         ) {
             edges {
@@ -60,10 +78,20 @@ export const homepageQuery = graphql`
                     frontmatter {
                         header
                         subheader
-                        header_image
                     }
                 }
             }
+        }
+        products: allMarkdownRemark(
+            filter: { frontmatter: { design_type: { eq: "Product" } } }
+        ) {
+            ...imageQuery
+        }
+
+        brand: allMarkdownRemark(
+            filter: { frontmatter: { design_type: { eq: "Bramd" } } }
+        ) {
+            ...imageQuery
         }
     }
 `;

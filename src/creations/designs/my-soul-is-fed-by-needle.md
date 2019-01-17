@@ -9,4 +9,5 @@ description: >-
   yourself to show of your passion of sewing, quilting or knitting.
 image: /img/my-soul-is-fed-by-needle.jpg
 design_type: Product
+templateKey: item-page
 ---
