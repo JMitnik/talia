@@ -1,7 +1,7 @@
 ---
+templateKey: home-page
 header: Talia's
 subheader: Designer
-header_image: /img/chemex.jpg
-templateKey: 'home-page'
+header_image: /img/products-full-width.jpg
 ---
 
