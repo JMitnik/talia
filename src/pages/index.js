@@ -6,9 +6,22 @@ import Header from '../components/Header';
 import Label from '../components/Label';
 import Section from '../components/styles/Section';
 import Portfolio from './Portfolio';
+import Testimonials from '../components/Testimonials';
+
+const SampleTestimonials = [
+    {
+        quote: 'Sit sint Lorem nisi ut dolor ullamco cupidatat mollit exercitation.',
+        author: 'Jane van Gaalen',
+        imageUrl: 'https://bodhiyogateachertraining.com/wp-content/uploads/2015/10/Testimonial-71.png'
+    },
+    {
+        quote: 'Ontzettend Gaaf. Leuke Samenwerking. Erg fijn',
+        author: 'Jane van Gaalen',
+        imageUrl: 'https://bodhiyogateachertraining.com/wp-content/uploads/2015/10/Testimonial-71.png'
+    },
+];
 
 const IndexPage = ({ data }) => {
-    console.log(data);
     const frontData = data.homepage.edges[0].node.frontmatter;
     const { header, subheader, header_image } = frontData;
 
@@ -35,11 +48,10 @@ const IndexPage = ({ data }) => {
                     versies van Lorem Ipsum bevatten.
                 </p>
             </Section>
-            <Section center>
-                <h4>Portfolio</h4>
-                <Portfolio />
+            <Section center />
+            <Section>
+                <Testimonials testimonials={SampleTestimonials} />
             </Section>
-            <Section />
         </Layout>
     );
 };

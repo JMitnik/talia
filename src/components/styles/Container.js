@@ -5,6 +5,7 @@ const Container = styled.div`
     max-width: ${props => props.theme.containerWidthLg};
     margin: 0 auto;
     width: 100%;
+    flex-wrap: wrap;
     padding-left: ${props => props.theme.gutter};
     padding-right: ${props => props.theme.gutter};
 
