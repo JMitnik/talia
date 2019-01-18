@@ -56,8 +56,8 @@ const IndexPage = ({ data }) => {
     );
 };
 
-export const imageQuery = graphql`
-    fragment imageQuery on MarkdownRemarkConnection {
+export const creationImageQuery = graphql`
+    fragment creationImageQuery on MarkdownRemarkConnection {
         edges {
             node {
                 frontmatter {
@@ -94,16 +94,33 @@ export const homepageQuery = graphql`
                 }
             }
         }
+
         products: allMarkdownRemark(
             filter: { frontmatter: { design_type: { eq: "Product" } } }
         ) {
-            ...imageQuery
+            ...creationImageQuery
         }
 
         brand: allMarkdownRemark(
-            filter: { frontmatter: { design_type: { eq: "Bramd" } } }
+            filter: { frontmatter: { design_type: { eq: "Brand" } } }
         ) {
-            ...imageQuery
+            ...creationImageQuery
+        }
+        
+        brand: allMarkdownRemark(
+            filter: { frontmatter: {templateKey: {eq: "testimonial-page"}}}
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                        imageUrl
+                        quote
+                        author
+                        affiliate
+                        logoUrl
+                    }
+                }
+            }
         }
     }
 `;
