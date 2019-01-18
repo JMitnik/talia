@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
                     {subheader}
                 </SubHeading>
             </Header>
-            <Section>
+            <Section center>
                 <Paragraph>
                     <PlayHeading>
                         Who am I?

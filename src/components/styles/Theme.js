@@ -1,7 +1,7 @@
 const Theme = {
     defaultColor: '#f6f6f6',
-    primaryColor: '#512DA8',
-    primaryAltColor: '#673AB7',
+    primaryColor: '#B24592',
+    primaryAltColor: '#F15F79',
     secondaryColor: 'red',
     containerWidthLg: '1344px',
     textContainer: '900px',
