@@ -3,6 +3,27 @@ import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import styled from 'styled-components';
 import Container from './styles/Container';
+import Button from './styles/Button';
+
+const SliderContent = styled.div`
+    margin-left: ${props => props.theme.gutter};
+`;
+
+const Quote = styled.span`
+    position: relative;
+    display: inline-block;
+    width: auto;
+    text-align: left;
+
+    /* Quote  */
+    /* &:before {
+        content: '"';
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: rebeccapurple;
+    } */
+`;
 
 const SlideImage = styled.img`
     max-width: 150px;
@@ -15,6 +36,7 @@ const ActiveSlide = styled.article`
     padding-top: ${props => props.theme.gutter};
     padding-bottom: ${props => props.theme.gutter};
     border-radius: 5px;
+    margin-bottom: 5px;
 
     h3,
     h4 {
@@ -24,14 +46,13 @@ const ActiveSlide = styled.article`
 
 const FlexContainer = styled.div`
     display: flex;
-    flex: 20%;
+    flex: 33%;
     justify-content: center;
     align-items: center;
-`;
 
-const Button = styled.button`
-    padding: 12px 20px;
-    background: ${props => props.theme.defaultColor};
+    > * {
+        margin: ${props => props.theme.gutter};
+    }
 `;
 
 class Testimonials extends Component {
@@ -88,15 +109,25 @@ class Testimonials extends Component {
                     <div>
                         <Container center>
                             <SlideImage src={currentTestimonial.imageUrl} />
-                            <h3>{currentTestimonial.quote}</h3>
-                            <h4>{currentTestimonial.author}</h4>
+                            <SliderContent>
+                                <Quote as="h3">{currentTestimonial.quote}</Quote>
+                                <h4>{currentTestimonial.author}</h4>
+                            </SliderContent>
                         </Container>
                     </div>
                 </ActiveSlide>
 
                 <FlexContainer>
                     {this.props.testimonials.map((testimonial, index) => (
-                        <Button onClick={() => this.setSlideIndex(index)} />
+                        <Button
+                            className={index == this.state.currentIndex ? 'active' : 'non-active'}
+                            lg
+                            primary
+                            key={v4()}
+                            onClick={() => this.setSlideIndex(index)}
+                        >
+                            {testimonial.author}
+                        </Button>
                     ))}
                 </FlexContainer>
             </div>

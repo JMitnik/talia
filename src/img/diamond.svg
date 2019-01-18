@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="82px" viewBox="0 0 72 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>SvgjsG1446</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="logo" transform="translate(0.000000, 1.000000)">
+            <g id="SvgjsG1446" transform="translate(0.002468, 0.000034)">
+                <rect id="Rectangle" stroke="#000000" stroke-width="1.99991129" transform="translate(35.996709, 34.999137) rotate(-135.000000) translate(-35.996709, -34.999137) " x="11.2478069" y="10.2517345" width="49.4978043" height="49.4948045"></rect>
+                <path d="M35.9977484,59.392935 L60.3909003,35.001783 L35.9987484,10.6076312 L11.6075964,35.0007831 L35.9977484,59.392935 Z M49.7832691,35.0007831 L35.9977484,48.7853038 L22.2132277,35.0007831 L35.9987484,21.2142624 L49.7832691,35.0007831 Z" id="Shape" stroke="#512DA8" stroke-width="1.99993047"></path>
+                <rect id="Rectangle" stroke="#000000" stroke-width="2.00005271" transform="translate(36.001002, 35.001665) rotate(-45.004051) translate(-36.001002, -35.001665) " x="33.7529429" y="32.7531059" width="4.49611849" height="4.49711851"></rect>
+                <polygon id="Path" stroke="#000000" stroke-width="1.99993047" points="35.9977484 69.9975663 5.9997914 40.0026092 1.00196516 44.9984355 35.9977484 79.9972186 70.9975315 44.9984355 65.9977054 39.9986093"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

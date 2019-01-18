@@ -5,8 +5,10 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Label from '../components/Label';
 import Section from '../components/styles/Section';
+import { MainHeading, SubHeading, PlayHeading } from '../components/styles/Headings';
 import Portfolio from './Portfolio';
 import Testimonials from '../components/Testimonials';
+import Paragraph from '../components/styles/Paragraph';
 
 const SampleTestimonials = [
     {
@@ -25,30 +27,45 @@ const IndexPage = ({ data }) => {
     const frontData = data.homepage.edges[0].node.frontmatter;
     const { header, subheader, header_image } = frontData;
 
+    const portfolioCollection = [ {'products': data.products} ];
+    const listTestimonials = data.testimonials;
+
     return (
         <Layout>
             <Header backgroundImage={header_image}>
-                <h4 class='text-playful'>Hello</h4>
-                <h1>{header}</h1>
-                <h2>{subheader}</h2>
+                <PlayHeading>
+                    Pleased to meet you
+                </PlayHeading>
+                <MainHeading as="h1">
+                    {header}
+                </MainHeading>
+                <SubHeading as="h2">
+                    {subheader}
+                </SubHeading>
             </Header>
-            <Section center>
-                <h3>Who am I?</h3>
-                <p>
-                    Lorem Ipsum is slechts een proeftekst uit het drukkerij- en
-                    zetterijwezen. Lorem Ipsum is de standaard proeftekst in
-                    deze bedrijfstak sinds de 16e eeuw, toen een onbekende
-                    drukker een zethaak met letters nam en ze door elkaar
-                    husselde om een font-catalogus te maken. Het heeft niet
-                    alleen vijf eeuwen overleefd maar is ook, vrijwel
-                    onveranderd, overgenomen in elektronische letterzetting. Het
-                    is in de jaren '60 populair geworden met de introductie van
-                    Letraset vellen met Lorem Ipsum passages en meer recentelijk
-                    door desktop publishing software zoals Aldus PageMaker die
-                    versies van Lorem Ipsum bevatten.
-                </p>
+            <Section>
+                <Paragraph>
+                    <PlayHeading>
+                        Who am I?
+                    </PlayHeading>
+                    <p>
+                        Lorem Ipsum is slechts een proeftekst uit het drukkerij- en
+                        zetterijwezen. Lorem Ipsum is de standaard proeftekst in
+                        deze bedrijfstak sinds de 16e eeuw, toen een onbekende
+                        drukker een zethaak met letters nam en ze door elkaar
+                        husselde om een font-catalogus te maken. Het heeft niet
+                        alleen vijf eeuwen overleefd maar is ook, vrijwel
+                        onveranderd, overgenomen in elektronische letterzetting. Het
+                        is in de jaren '60 populair geworden met de introductie van
+                        Letraset vellen met Lorem Ipsum passages en meer recentelijk
+                        door desktop publishing software zoals Aldus PageMaker die
+                        versies van Lorem Ipsum bevatten.
+                    </p>
+                </Paragraph>
             </Section>
-            <Section center />
+            <Section>
+                <Portfolio portfolioCollection={portfolioCollection}/>
+            </Section>
             <Section>
                 <Testimonials testimonials={SampleTestimonials} />
             </Section>

@@ -1,12 +1,21 @@
 const Theme = {
     defaultColor: '#f6f6f6',
-    primaryColor: '#ddd',
+    primaryColor: '#512DA8',
+    primaryAltColor: '#673AB7',
     secondaryColor: 'red',
     containerWidthLg: '1344px',
     textContainer: '900px',
     gutter: '30px',
-    mainFont: "'Quicksand', sans-serif",
-    playFont: '"Indie Flower", cursive'
+    gutterSm: '10px',
+    mainFont: '"Lato", sans-serif',
+    titleFont: '"Catamaran", sans-serif',
+    playFont: '"Amatic SC", cursive',
+    bodyTextColor: 'rgb(50, 56, 79)',
+    borderRadius: '3px',
+};
+
+Theme.gradients = {
+    primary: `linear-gradient(to right, ${Theme.primaryColor}, ${Theme.primaryAltColor})`
 };
 
 export default Theme;
