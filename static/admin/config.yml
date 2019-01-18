@@ -249,9 +249,9 @@ collections:
       fields:
             - { label: 'Quote', name: 'quote', widget: 'text'}
             - { label: 'Author', name: 'author', widget: 'string' }
-            - { label: 'Affiliate', name: 'affiliate', widget: 'string', required: 'false' }
-            - { label: 'Author''s image', name: 'imageUrl', widget: 'image' , required: 'false'}
-            - { label: 'Affiliate logo', name: 'logoUrl', widget: 'image' , required: 'false'}
+            - { label: 'Affiliate', name: 'affiliate', widget: 'string', required: false }
+            - { label: 'Author''s image', name: 'imageUrl', widget: 'image' , required: false}
+            - { label: 'Affiliate logo', name: 'logoUrl', widget: 'image' , required: false}
             - {     
                 label: 'Template Key',
                 name: 'templateKey',
