@@ -107,21 +107,21 @@ export const homepageQuery = graphql`
             ...creationImageQuery
         }
         
-        brand: allMarkdownRemark(
-            filter: { frontmatter: {templateKey: {eq: "testimonial-page"}}}
-        ) {
-            edges {
-                node {
-                    frontmatter {
-                        imageUrl
-                        quote
-                        author
-                        affiliate
-                        logoUrl
-                    }
-                }
-            }
-        }
+        # brand: allMarkdownRemark(
+        #     filter: { frontmatter: {templateKey: {eq: "testimonial-page"}}}
+        # ) {
+        #     edges {
+        #         node {
+        #             frontmatter {
+        #                 imageUrl
+        #                 quote
+        #                 author
+        #                 affiliate
+        #                 logoUrl
+        #             }
+        #         }
+        #     }
+        # }
     }
 `;
 
