@@ -1,5 +1,5 @@
 ---
 title: Test
-thumbnail: /img/chemex.jpg
+thumbnail: /img/jumbotron.jpg
 ---
 
